@@ -2,7 +2,7 @@ import { Version } from '../src/version';
 
 describe( 'Version Class test', () =>
 {
-	test( 'test non argument methods', () =>
+	test( 'parse method', () =>
 	{
 		expect( () => Version.parse( '    1. 2   .  3 .4   ' ) ).not.toThrow();
 
@@ -94,7 +94,7 @@ describe( 'Version Class test', () =>
 		expect( () => new Version( [ 1, 2, 3, 4, NaN ] ) ).toThrow();
 	} );
 
-	test( 'input has to be array', () =>
+	test( 'input has to be array of numbers', () =>
 	{
 		expect( () => new Version( 'hello' as any ) ).toThrow();
 	} );
@@ -104,13 +104,12 @@ describe( 'Version Class test', () =>
 		const version = new Version( [ 1, 2, 3, 4 ] );
 
 		expect( version.toString() ).toBe( '1.2.3.4' );
-		expect( version.toString( Infinity ) ).toBe( '1.2.3.4' );
 		expect( version.toString( 1 ) ).toBe( '1' );
-		expect( version.toString( 2 ) ).toBe( '2' );
-		expect( version.toString( 3 ) ).toBe( '3' );
-		expect( version.toString( 4 ) ).toBe( '4' );
-		expect( version.toString( -1 ) ).toThrow();
-		expect( version.toString( 0 ) ).toThrow();
-		expect( version.toString( 5 ) ).toThrow();
+		expect( version.toString( 2 ) ).toBe( '1.2' );
+		expect( version.toString( 3 ) ).toBe( '1.2.3' );
+		expect( version.toString( 4 ) ).toBe( '1.2.3.4' );
+		expect( () => version.toString( -1 ) ).toThrow();
+		expect( () => version.toString( 0 ) ).toThrow();
+		expect( () => version.toString( 5 ) ).toThrow();
 	} );
 } );
