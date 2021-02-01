@@ -1,6 +1,6 @@
 {
   "name": "@m4x1m1l14n/version",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "homepage": "https://github.com/m4x1m1l14n/versions",
   "description": "Helpers for manipulating version strings",
   "main": "dist/index.js",
