@@ -1,5 +1,7 @@
 # NodeJS Version string helper
 
+![ci](https://github.com/m4x1m1l14n/versions/workflows/ci/badge.svg?branch=master)
+
 ## Install
 
 ```
