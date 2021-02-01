@@ -2,6 +2,8 @@
 
 ![ci](https://github.com/m4x1m1l14n/versions/workflows/ci/badge.svg?branch=master)
 
+[![codecov](https://codecov.io/gh/m4x1m1l14n/versions/branch/master/graph/badge.svg?token=HZOWMX39KF)](https://codecov.io/gh/m4x1m1l14n/versions)
+
 ## Install
 
 ```
